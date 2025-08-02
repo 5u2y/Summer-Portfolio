@@ -1,0 +1,5 @@
+/* src/projects/TermProjectPage/TermProjectPage.module.css */
+.termProjectPage {
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    text-align: center;
+  }

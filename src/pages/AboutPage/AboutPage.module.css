@@ -1,0 +1,290 @@
+/* src/pages/AboutPage/AboutPage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* Global styles from a shared global.css file should also be present */
+/* :root variables, base body styles etc. */
+
+.aboutPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+.sectionHeading {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-top: var(--spacing-xxl);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.sectionHeading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-accent);
+  margin: var(--spacing-md) auto 0;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Hero Section */
+.aboutHero {
+  padding: var(--spacing-xxl) 0;
+  text-align: center;
+  background-color: var(--color-soft-lavender);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-xxl);
+  box-shadow: var(--shadow-lg);
+}
+
+.heroContent {
+  display: grid;
+  /* NEW: Reverted to a 12-column grid for a side-by-side layout */
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-lg);
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profilePicContainer {
+  /* NEW: Use grid columns for side-by-side alignment */
+  grid-column: 1 / span 4;
+  width: 172.5px; /* Increased by approximately 15% from 150px */
+  height: 172.5px; /* Increased by approximately 15% from 150px */
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--color-background-light);
+  /* NEW: Align the image to the start of its column */
+  justify-self: start;
+}
+
+.profilePic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroTextContent {
+  /* NEW: Place the text in the columns next to the image */
+  grid-column: 5 / span 8;
+  /* NEW: Align the text to the left for better readability */
+  text-align: left;
+}
+
+.heroTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: var(--font-size-h3);
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-weight: var(--font-weight-regular);
+}
+
+/* Intro Section */
+.introSection {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.introContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.introText {
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+/* Principles Section */
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.principleCard {
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.principleTitle {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.principleDescription {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+/* Education Section */
+.educationSection, .skillsSection {
+  margin-top: var(--spacing-xxl);
+}
+
+.educationInstitute {
+  text-align: center;
+  font-size: var(--font-size-h3);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* NEW: Styling for the updated education section content */
+.educationCourses {
+  text-align: center;
+  margin: var(--spacing-md) auto;
+}
+
+.educationProgram {
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.educationButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.educationButton:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Image Section */
+.imageSection {
+  margin-top: var(--spacing-xxl);
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.imageFrame {
+  width: 100%;
+  max-width: 360px;
+  height: auto; /* Use auto for height to maintain aspect ratio */
+  aspect-ratio: 1 / 1; /* Force a square aspect ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Use 'contain' to ensure entire image is visible */
+  display: block;
+}
+
+/* Skills Section */
+.skillsContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: center;
+}
+
+.skillCategory {
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.skillCategoryTitle {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.skillCategory ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skillCategory li {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xxs) 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .aboutHero {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .heroContent {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .profilePicContainer {
+    grid-row: 1;
+    grid-column: span 12;
+    justify-self: center;
+  }
+
+  .heroTextContent {
+    grid-row: 2;
+    grid-column: span 12;
+    text-align: center;
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-h2);
+  }
+
+  .heroSubtitle {
+    font-size: var(--font-size-body);
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

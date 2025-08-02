@@ -1,0 +1,6 @@
+/* src/pages/projects/CompanyBrandingPage/CompanyBrandingPage.module.css */
+.companyBrandingPage {
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    text-align: center;
+  }
+  

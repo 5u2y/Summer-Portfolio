@@ -1,0 +1,145 @@
+/* src/pages/TargetDisciplinePage/TargetDisciplinePage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+.targetDisciplinePage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xxl) var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+.pageTitle {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xxl);
+}
+
+/* NEW: Styling for the introduction section */
+.introSection {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xxl) auto;
+  text-align: center;
+}
+
+.introText {
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+  color: var(--color-text-primary);
+}
+
+.section {
+  margin-bottom: var(--spacing-xxl);
+  /* MODIFIED: Add flexbox to allow role sections to be side-by-side */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg); /* Add gap for spacing between the sections */
+}
+
+.sectionHeading {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-align: center;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-lg);
+  width: 100%; /* Ensure the heading takes full width in the flex container */
+}
+
+.sectionHeading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-accent);
+  margin: var(--spacing-md) auto 0;
+  border-radius: var(--border-radius-sm);
+}
+
+.focusList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  font-size: var(--font-size-body-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.focusList li {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-background-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.roleSection {
+  background-color: var(--color-soft-lavender);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  /* MODIFIED: Adjusted for new flexbox parent */
+  flex: 1 1 300px; /* Allow items to grow, shrink, and have a minimum width */
+  margin: 0; /* Remove top/bottom margin, use parent gap instead */
+  max-width: none; /* Remove max-width to allow flexing */
+  box-shadow: var(--shadow-md);
+}
+
+.roleTitle {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-dark);
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.courseList {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.courseList li {
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* NEW: Styling for the resume button */
+.resumeButtonContainer {
+  text-align: center;
+  margin-top: var(--spacing-xxl);
+}
+
+.resumeButton {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.resumeButton:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .focusList {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* MODIFIED: Add mobile styling for the role sections */
+  .section {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}

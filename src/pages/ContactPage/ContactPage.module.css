@@ -1,0 +1,202 @@
+/* src/pages/ContactPage/ContactPage.module.css */
+
+.contactPage {
+    width: 100%;
+    padding-bottom: var(--spacing-xxl); /* Add padding to the bottom for footer */
+  }
+  
+  /* Hero Section (similar to other page heroes) */
+  .contactHero {
+    background-color: var(--color-soft-lavender); /* Using one of your accent colors */
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    margin: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  
+  .heroContent {
+    max-width: 800px;
+  }
+  
+  .heroTitle {
+    font-size: var(--font-size-h1);
+    color: var(--color-text-dark); /* Dark text on your light lavender background */
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .heroSubtitle {
+    font-size: var(--font-size-h3);
+    color: var(--color-text-dark);
+    opacity: 0.8;
+  }
+  
+  /* Main Content Section */
+  .contactContent {
+    max-width: 900px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text-dark);
+  }
+  
+  .contactContent p {
+    font-size: var(--font-size-body);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .contactMethods {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    gap: var(--spacing-xl); /* Space between contact method blocks */
+    margin-top: var(--spacing-lg);
+  }
+  
+  .methodItem {
+    background-color: var(--color-background-white); /* White background for each method box */
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex: 1; /* Allow items to grow/shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+    max-width: 350px; /* Max width to keep them from getting too wide */
+    text-align: center;
+  }
+  
+  .methodItem h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-soft-baby-blue); /* Use an accent color for headings */
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .methodItem p {
+    font-size: var(--font-size-body);
+    margin-bottom: 0; /* No margin at the bottom of the last paragraph */
+  }
+  
+  .methodItem a {
+    color: var(--color-text-dark); /* Ensure links are readable */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .methodItem a:hover {
+    color: var(--color-soft-baby-blue); /* Accent color on hover */
+    text-decoration: underline;
+  }
+  
+  
+  /* Form Styles (if you uncomment the form in ContactPage.jsx) */
+  /*
+  .formHeading {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-dark);
+    margin-top: var(--spacing-xxl);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .contactForm {
+    background-color: var(--color-background-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: var(--spacing-lg) auto;
+    text-align: left;
+  }
+  
+  .formGroup {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: var(--font-size-body);
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-background-white);
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border-color: var(--color-soft-baby-blue);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(var(--color-soft-baby-blue), 0.2);
+  }
+  
+  .submitButton {
+    display: block;
+    width: auto;
+    min-width: 150px;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-soft-baby-blue);
+    color: var(--color-text-light); // White text on soft baby blue button
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-body);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .submitButton:hover {
+    background-color: var(--color-soft-lavender); // Another accent color on hover
+    transform: translateY(-2px);
+  }
+  */
+  
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .contactHero {
+      margin: var(--spacing-md);
+      padding: var(--spacing-xl) var(--spacing-sm);
+    }
+  
+    .heroTitle {
+      font-size: var(--font-size-h2);
+    }
+  
+    .heroSubtitle {
+      font-size: var(--font-size-body);
+    }
+  
+    .contactContent {
+      padding: 0 var(--spacing-sm);
+    }
+  
+    .contactMethods {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+  
+    .methodItem {
+      width: 100%;
+      max-width: 400px; /* Constrain width on smaller screens */
+    }
+  
+    /* .contactForm {
+      padding: var(--spacing-md);
+    } */
+  }
