@@ -1,0 +1,38 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+    margin-top: auto;
+    background-color: var(--color-background-dark);
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-align: center;
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  .footer p, .footer span {
+    white-space: nowrap; /* Prevent text from breaking within p/span */
+  }
+  
+  .footer a {
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .footer a:hover {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 500px) {
+    .footer {
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+    .footer span {
+      display: none; /* Hide separators when stacked vertically */
+    }
+  }

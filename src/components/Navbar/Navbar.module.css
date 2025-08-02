@@ -1,0 +1,66 @@
+/* src/components/Navbar/Navbar.module.css */
+
+/* Base Navbar container */
+.navbar {
+    background-color: var(--color-background-white); /* Navbar background is now white */
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Keep a subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbarContainer {
+    display: flex;
+    justify-content: space-between; /* This separates the left-aligned brand from the right-aligned nav links */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Brand/Logo styling ("Qui Diaz" text) */
+  .navbarBrand {
+    color: var(--color-text-dark); /* Brand text is now dark for readability on white background */
+    font-size: var(--font-size-h2); /* Keep font size prominent */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbarBrand:hover {
+    color: var(--color-soft-baby-blue); /* Hover color can be one of your accents */
+  }
+  
+  /* Navigation links container (About, Projects, Contact) */
+  .navLinks {
+    display: flex;
+    gap: var(--spacing-md);
+  }
+  
+  /* Individual navigation link styling */
+  .navLink {
+    color: var(--color-text-dark); /* Link text is now dark for readability on white background */
+    text-decoration: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: var(--font-size-body);
+    font-weight: 600; /* Semi-bold for good readability */
+  }
+  
+  .navLink:hover {
+    background-color: var(--color-soft-lavender); /* Hover background can be one of your accents */
+    color: var(--color-text-dark); /* Text color remains dark on light hover background */
+  }
+  
+  /* Active link styling (when on that page) */
+  .navLink.active {
+    background-color: var(--color-soft-baby-blue); /* Active background can be one of your accents */
+    color: var(--color-text-dark); /* Text color remains dark on light active background */
+  }
+  
+  /* Hide the hamburger button (as per previous decision) */
+  .hamburger {
+    display: none;
+  }
+  
