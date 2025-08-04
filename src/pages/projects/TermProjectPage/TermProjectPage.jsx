@@ -1,12 +1,23 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import styles from "./TermProjectPage.module.css";
 // Corrected the import paths to include the "assets" folder, as seen in your screenshot.
 import LogoImage from "../../../assets/images/projects/term-project/Logo2.png";
 import ColorPaletteImage from "../../../assets/images/projects/term-project/ColourPalette2.png";
 
 const TermProjectPage = () => {
+  const navigate = useNavigate();
+
+  // The back button now navigates to the Projects page
+  const handleBackClick = () => {
+    navigate('/projects');
+  };
+
   return (
     <div className={styles.projectPage}>
+      <button onClick={handleBackClick} className={styles.backButton}>
+        Back
+      </button>
       <h1 className={styles.projectTitle}>Product Design - Term Project</h1>
       <div className={styles.projectHeader}>
         <div className={styles.headerItem}>
@@ -54,14 +65,12 @@ const TermProjectPage = () => {
         </p>
       </div>
 
-      {/* --- New Section for Branding Guide --- */}
       <div className={styles.projectSection}>
         <h2 className={styles.sectionTitle}>Branding Guide</h2>
         <p className={styles.sectionText}>
           A key part of the product design was establishing a clean and minimalist brand identity for the scented candle line, "Candles & Hearth." Below are the core brand elements.
         </p>
 
-        {/* Logo Section */}
         <div className={styles.imageContainer}>
           <h3 className={styles.imageTitle}>Brand Logo</h3>
           <img
@@ -71,7 +80,6 @@ const TermProjectPage = () => {
           />
         </div>
 
-        {/* Color Palette Section */}
         <div className={styles.imageContainer}>
           <h3 className={styles.imageTitle}>Main and Accent Colours</h3>
           <img
@@ -81,7 +89,6 @@ const TermProjectPage = () => {
           />
         </div>
 
-        {/* Typography Section */}
         <div className={styles.projectSection}>
           <h3 className={styles.sectionTitle}>Typography</h3>
           <p className={styles.sectionText}>The brand utilizes a clean and modern font hierarchy to maintain its minimalist aesthetic.</p>

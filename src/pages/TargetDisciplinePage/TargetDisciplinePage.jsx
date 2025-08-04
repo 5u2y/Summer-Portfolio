@@ -1,20 +1,19 @@
 // src/pages/TargetDisciplinePage/TargetDisciplinePage.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // NEW: Import useNavigate hook
+import { useNavigate } from 'react-router-dom';
 import styles from './TargetDisciplinePage.module.css';
 import resumePdf from '../../assets/images/etc/Qui_Diaz_Resume.PDF';
 
 const TargetDisciplinePage = () => {
-  const navigate = useNavigate(); // NEW: Initialize the useNavigate hook
+  const navigate = useNavigate();
 
-  // NEW: Function to handle the back button click
+  // The back button now navigates to the About page as requested
   const handleBackClick = () => {
-    navigate('/about'); // This assumes your AboutPage route is '/about'
+    navigate('/about');
   };
 
   return (
     <div className={styles.targetDisciplinePage}>
-      {/* NEW: Back button */}
       <button onClick={handleBackClick} className={styles.backButton}>
         Back
       </button>

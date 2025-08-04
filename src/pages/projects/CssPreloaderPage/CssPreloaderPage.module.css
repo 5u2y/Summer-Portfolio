@@ -1,7 +1,4 @@
-/* src/pages/projects/CssPreloaderPage/CssPreloaderPage.module.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&display=swap');
-
-/* Main page container styling from TermProjectPage */
+/* CssPreloaderPage.module.css */
 .projectPage {
     max-width: 1000px;
     margin: 0 auto;
@@ -12,85 +9,38 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     line-height: 1.6;
+    position: relative;
 }
 
-/* Project title styling from TermProjectPage */
+.backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #B19CD9;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #9c80d4;
+}
+
 .projectTitle {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #B19CD9; /* Soft purple */
+    color: #B19CD9;
     text-align: center;
     margin-bottom: 2rem;
     border-bottom: 3px solid #E6E6FA;
     padding-bottom: 1rem;
 }
 
-/* Live Demo Section - Preserving the dark theme */
-.demoSection {
-    text-align: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-  
-.demoTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1rem;
-}
-  
-/* The actual barcode animation styles - unchanged */
-.container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-  
-.barcode {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-  
-.barcodeBar {
-    width: 6px;
-    height: 50px;
-    margin: 0 2px;
-    background-color: white;
-    opacity: 0;
-    animation: barcodeAnimation 1.5s forwards infinite;
-}
-  
-.barcodeBar:nth-child(1) { animation-delay: 0s; }
-.barcodeBar:nth-child(2) { animation-delay: 0.2s; }
-.barcodeBar:nth-child(3) { animation-delay: 0.4s; }
-.barcodeBar:nth-child(4) { animation-delay: 0.6s; }
-.barcodeBar:nth-child(5) { animation-delay: 0.8s; }
-.barcodeBar:nth-child(6) { animation-delay: 1s; }
-.barcodeBar:nth-child(7) { animation-delay: 1.2s; }
-  
-@keyframes barcodeAnimation {
-    0% { opacity: 0; transform: scaleY(0); }
-    50% { opacity: 1; transform: scaleY(1); }
-    100% { opacity: 0; transform: scaleY(0); }
-}
-  
-.loadingText {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-  
-/* Project header styling from TermProjectPage */
 .projectHeader {
     display: flex;
     flex-wrap: wrap;
@@ -100,15 +50,15 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    gap: 1rem; /* Added gap for better spacing */
+    gap: 1rem;
 }
-  
+
 .headerItem {
     flex: 1 1 180px;
     padding: 0.5rem 1rem;
     text-align: center;
 }
-  
+
 .headerLabel {
     font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;
@@ -117,50 +67,133 @@
     margin-bottom: 0.25rem;
     text-transform: uppercase;
 }
-  
+
 .headerValue {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #333;
 }
-  
-/* Project section styling from TermProjectPage */
+
 .projectSection {
     margin-bottom: 2rem;
 }
-  
+
 .sectionTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.75rem;
     font-weight: 600;
     color: #B19CD9;
     margin-bottom: 1rem;
-    padding-left: 0;
-    border-bottom: 3px solid #E6E6FA;
-    padding-bottom: 0.5rem;
 }
-  
+
 .sectionText {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     color: #444;
     text-align: justify;
 }
-  
-/* Code block container - preserving dark theme */
+
+.demoSection {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.demoTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barcode {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.barcodeBar {
+    width: 6px;
+    height: 50px;
+    margin: 0 2px;
+    background-color: white;
+    opacity: 0;
+    animation: barcodeAnimation 1.5s forwards infinite;
+}
+
+.barcodeBar:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.barcodeBar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.barcodeBar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.barcodeBar:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.barcodeBar:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.barcodeBar:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.barcodeBar:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+@keyframes barcodeAnimation {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
+.loadingText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
 .codeFlexContainer {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-  
+
 .codeContainer {
     flex: 1;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
-  
+
 .codeTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -168,7 +201,7 @@
     color: #555;
     margin-bottom: 1rem;
 }
-  
+
 .codeBlock {
     background-color: #2d2d2d;
     color: #cccccc;
@@ -183,8 +216,27 @@
     line-height: 1.5;
     font-family: 'Courier New', Courier, monospace;
 }
-  
-/* Responsive adjustments from TermProjectPage */
+
+.technicalInfo {
+    margin-top: 1rem;
+}
+
+.sourceList {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.sourceList li a {
+    color: #B19CD9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sourceList li a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .projectPage {
         padding: 1rem;
@@ -194,7 +246,6 @@
     }
     .projectHeader {
         flex-direction: column;
-        text-align: center;
     }
     .headerItem {
         padding: 0.5rem;

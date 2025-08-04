@@ -1,12 +1,25 @@
+//CompanyBrandingPage.jsx
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './CompanyBrandingPage.module.css';
 
 // Corrected import path for the final product image
 import finalProductImage from '../../../assets/images/projects/company-branding/MDIA_2166_Qui_Diaz_Excerise_5.jpg';
 
 const CompanyBrandingPage = () => {
+    const navigate = useNavigate();
+
+    // The back button now navigates to the Projects page
+    const handleBackClick = () => {
+        navigate('/projects');
+    };
+
     return (
         <div className={styles.projectPage}>
+            <button onClick={handleBackClick} className={styles.backButton}>
+                Back
+            </button>
             <h1 className={styles.projectTitle}>Company Branding Guide</h1>
             
             <div className={styles.projectHeader}>

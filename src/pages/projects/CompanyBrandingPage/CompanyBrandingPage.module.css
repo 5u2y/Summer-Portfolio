@@ -1,39 +1,43 @@
-/* Import Google Fonts for Montserrat and Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400&family=Quicksand:wght@400&display=swap');
-
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9; /* Updated background to match TermProjectPage */
-  color: #333;
-}
-
-/* Main container for the project page, with a light background for readability */
+/* CompanyBrandingPage.module.css */
 .projectPage {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Montserrat', 'Poppins', sans-serif;
-  line-height: 1.6;
+  color: #333;
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #B19CD9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #9c80d4;
 }
 
 .projectTitle {
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #B19CD9; /* Soft purple color */
+  color: #B19CD9;
   text-align: center;
   margin-bottom: 2rem;
-  border-bottom: 3px solid #E6E6FA; /* New border style */
+  border-bottom: 3px solid #E6E6FA;
   padding-bottom: 1rem;
 }
 
@@ -42,17 +46,17 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 2rem;
-  background-color: #E6E6FA; /* Soft lavender color */
+  background-color: #E6E6FA;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   gap: 1rem;
 }
 
 .headerItem {
-  flex: 1 1 180px; /* Adjusted flex-basis for better spacing */
+  flex: 1 1 180px;
   padding: 0.5rem 1rem;
-  text-align: center; /* Centered text */
+  text-align: center;
 }
 
 .headerLabel {
@@ -79,77 +83,61 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
-  color: #B19CD9; /* Soft purple color */
+  color: #B19CD9;
   margin-bottom: 1rem;
-  border-bottom: 3px solid #E6E6FA;
-  padding-bottom: 0.5rem;
-  padding-left: 0;
 }
 
 .sectionText {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
   color: #444;
   text-align: justify;
 }
 
-.techList {
-    list-style-type: none;
-    padding: 0;
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.techList li {
-    background-color: #E6E6FA;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
-    color: #333;
-    border: 1px solid #dcdce6;
-}
-
-.sourceLink {
-    color: #B19CD9; /* Updated link color */
-    text-decoration: underline;
-}
-
-/* New styles for the final product image */
 .finalProductImageContainer {
-    text-align: center;
-    margin: 2rem 0;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .finalProductImage {
-    max-width: 75%; /* Reduced max-width to scale the image down by 25% */
-    height: auto;
-    border-radius: 8px; /* Consistent border radius */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments from TermProjectPage */
+.techList {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.techList li {
+  background-color: #E6E6FA;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid #dcdce6;
+}
+
 @media (max-width: 768px) {
   .projectPage {
-    padding: 1rem;
+      padding: 1rem;
   }
-
   .projectTitle {
-    font-size: 2rem;
+      font-size: 2rem;
   }
-
   .projectHeader {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
   }
-  
   .headerItem {
-    padding: 0.5rem;
+      padding: 0.5rem;
   }
-
   .sectionTitle {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 }

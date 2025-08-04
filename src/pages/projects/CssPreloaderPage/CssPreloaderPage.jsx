@@ -1,8 +1,16 @@
 // src/pages/projects/CssPreloaderPage/CssPreloaderPage.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './CssPreloaderPage.module.css';
 
 const CssPreloaderPage = () => {
+    const navigate = useNavigate();
+
+    // The back button now navigates to the Projects page
+    const handleBackClick = () => {
+        navigate('/projects');
+    };
+    
   const htmlCode = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +127,9 @@ body {
 
   return (
     <div className={styles.projectPage}>
+      <button onClick={handleBackClick} className={styles.backButton}>
+        Back
+      </button>
       <h1 className={styles.projectTitle}>CSS Pre-Loader</h1>
 
       {/* Live Demo Section - Now correctly implementing the barcode animation */}
@@ -177,7 +188,6 @@ body {
 
       <section className={styles.projectSection}>
         <h2 className={styles.sectionTitle}>Source Code</h2>
-        {/* New container for side-by-side layout */}
         <div className={styles.codeFlexContainer}>
           <div className={styles.codeContainer}>
             <h3 className={styles.codeTitle}>index.html</h3>

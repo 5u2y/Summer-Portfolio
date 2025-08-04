@@ -1,8 +1,16 @@
 import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './GsapAnimationPage.module.css';
 import { gsap } from 'gsap';
 
 const GSAPProjectPage = () => {
+    const navigate = useNavigate();
+
+    // The back button now navigates to the Projects page
+    const handleBackClick = () => {
+        navigate('/projects');
+    };
+
     // Refs to directly target the elements for GSAP animation
     const switchRef = useRef(null);
     const toggleButtonRef = useRef(null);
@@ -199,6 +207,9 @@ body {
 
     return (
         <div className={styles.projectPage}>
+            <button onClick={handleBackClick} className={styles.backButton}>
+                Back
+            </button>
             <h1 className={styles.projectTitle}>GSAP Timeline Animation</h1>
 
             <div className={styles.projectHeader}>
