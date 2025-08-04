@@ -1,6 +1,152 @@
-/* src/pages/projects/CompanyBrandingPage/CompanyBrandingPage.module.css */
-.companyBrandingPage {
-    padding: var(--spacing-xxl) var(--spacing-lg);
+/* Import Google Fonts for Montserrat and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define CSS Variables with the correct colors */
+:root {
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+
+  --spacing-xxl: 4rem;
+  --spacing-xl: 3rem;
+  --spacing-lg: 2rem;
+  --spacing-md: 1.5rem;
+  --spacing-sm: 1rem;
+  --spacing-xs: 0.5rem;
+
+  --border-radius-lg: 1rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-sm: 0.5rem;
+
+  --color-heading-purple: #8C63B7;
+  --color-soft-lavender: #E6E6FA;
+  --color-pastel-yellow: #F5F5DC;
+  --color-soft-baby-blue: #ADD8E6;
+
+  /* Black for the main body text and header container text */
+  --color-text-black: #000;
+  --color-text-secondary: #666;
+  --color-border: #ccc;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Poppins for all regular text */
+  background-color: #f0f2f5; /* A neutral light gray background for the page */
+}
+
+/* Main container for the project page, with a white background for readability */
+.projectPage {
+  max-width: 900px;
+  margin: var(--spacing-xl) auto;
+  padding: var(--spacing-xl) 5vw;
+  color: var(--color-text-black); /* Main body text is black */
+  background-color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.projectTitle {
+  font-family: 'Montserrat', sans-serif; /* Montserrat for the main title */
+  font-size: var(--font-size-h1);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-heading-purple); /* Title is now the new purple color */
+}
+
+.projectHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-soft-lavender);
+}
+
+.headerItem {
+  flex: 1 1 auto;
+  min-width: 150px;
+  text-align: left;
+}
+
+.headerLabel {
+  font-weight: 500;
+  color: var(--color-text-black); /* Header label is black */
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.headerValue {
+  font-weight: 700;
+  color: var(--color-text-black); /* Header value is black */
+  margin: 0;
+  font-size: var(--font-size-body);
+}
+
+.projectSection {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.sectionTitle {
+  font-family: 'Montserrat', sans-serif; /* Montserrat for section titles */
+  font-size: var(--font-size-h2);
+  color: var(--color-heading-purple); /* Section title is now the new purple color */
+  margin-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-soft-baby-blue);
+  padding-bottom: var(--spacing-xs);
+}
+
+.sectionText {
+  font-size: var(--font-size-body);
+  line-height: 1.8;
+}
+
+.techList {
+  list-style-type: none;
+  padding-left: 0;
+}
+        
+.sourceLink {
+    color: var(--color-soft-baby-blue);
+    text-decoration: underline;
+}
+
+/* New styles for the final product image */
+.finalProductImageContainer {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.finalProductImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .projectTitle {
+    font-size: var(--font-size-h2);
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-h3);
+  }
+
+  .projectHeader {
+    flex-direction: column;
     text-align: center;
   }
-  
+}
