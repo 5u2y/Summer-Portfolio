@@ -1,5 +1,5 @@
 /* Import Google Fonts for Montserrat and Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400&family=Quicksand:wght@400&display=swap');
 
 /* General Reset */
 * {
@@ -8,145 +8,148 @@
   box-sizing: border-box;
 }
 
-/* Define CSS Variables with the correct colors */
-:root {
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-body: 1rem;
-  --font-size-sm: 0.875rem;
-
-  --spacing-xxl: 4rem;
-  --spacing-xl: 3rem;
-  --spacing-lg: 2rem;
-  --spacing-md: 1.5rem;
-  --spacing-sm: 1rem;
-  --spacing-xs: 0.5rem;
-
-  --border-radius-lg: 1rem;
-  --border-radius-md: 0.75rem;
-  --border-radius-sm: 0.5rem;
-
-  --color-heading-purple: #8C63B7;
-  --color-soft-lavender: #E6E6FA;
-  --color-pastel-yellow: #F5F5DC;
-  --color-soft-baby-blue: #ADD8E6;
-
-  /* Black for the main body text and header container text */
-  --color-text-black: #000;
-  --color-text-secondary: #666;
-  --color-border: #ccc;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
 body {
-  font-family: 'Poppins', sans-serif; /* Poppins for all regular text */
-  background-color: #f0f2f5; /* A neutral light gray background for the page */
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* Updated background to match TermProjectPage */
+  color: #333;
 }
 
-/* Main container for the project page, with a white background for readability */
+/* Main container for the project page, with a light background for readability */
 .projectPage {
-  max-width: 900px;
-  margin: var(--spacing-xl) auto;
-  padding: var(--spacing-xl) 5vw;
-  color: var(--color-text-black); /* Main body text is black */
-  background-color: #ffffff;
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-sm);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .projectTitle {
-  font-family: 'Montserrat', sans-serif; /* Montserrat for the main title */
-  font-size: var(--font-size-h1);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #B19CD9; /* Soft purple color */
   text-align: center;
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-heading-purple); /* Title is now the new purple color */
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #E6E6FA; /* New border style */
+  padding-bottom: 1rem;
 }
 
 .projectHeader {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  background-color: var(--color-soft-lavender);
+  margin-bottom: 2rem;
+  background-color: #E6E6FA; /* Soft lavender color */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  gap: 1rem;
 }
 
 .headerItem {
-  flex: 1 1 auto;
-  min-width: 150px;
-  text-align: left;
+  flex: 1 1 180px; /* Adjusted flex-basis for better spacing */
+  padding: 0.5rem 1rem;
+  text-align: center; /* Centered text */
 }
 
 .headerLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-text-black); /* Header label is black */
-  margin: 0;
-  font-size: var(--font-size-sm);
+  color: #666;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .headerValue {
-  font-weight: 700;
-  color: var(--color-text-black); /* Header value is black */
-  margin: 0;
-  font-size: var(--font-size-body);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .projectSection {
-  margin-bottom: var(--spacing-xxl);
+  margin-bottom: 2rem;
 }
 
 .sectionTitle {
-  font-family: 'Montserrat', sans-serif; /* Montserrat for section titles */
-  font-size: var(--font-size-h2);
-  color: var(--color-heading-purple); /* Section title is now the new purple color */
-  margin-bottom: var(--spacing-md);
-  border-bottom: 2px solid var(--color-soft-baby-blue);
-  padding-bottom: var(--spacing-xs);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #B19CD9; /* Soft purple color */
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #E6E6FA;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
 }
 
 .sectionText {
-  font-size: var(--font-size-body);
-  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: justify;
 }
 
 .techList {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
-        
+
+.techList li {
+    background-color: #E6E6FA;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #333;
+    border: 1px solid #dcdce6;
+}
+
 .sourceLink {
-    color: var(--color-soft-baby-blue);
+    color: #B19CD9; /* Updated link color */
     text-decoration: underline;
 }
 
 /* New styles for the final product image */
 .finalProductImageContainer {
     text-align: center;
-    margin-top: var(--spacing-lg);
+    margin: 2rem 0;
 }
 
 .finalProductImage {
-    max-width: 100%;
+    max-width: 75%; /* Reduced max-width to scale the image down by 25% */
     height: auto;
-    border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-md);
+    border-radius: 8px; /* Consistent border radius */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Consistent shadow */
 }
 
+/* Responsive adjustments from TermProjectPage */
 @media (max-width: 768px) {
-  .projectTitle {
-    font-size: var(--font-size-h2);
+  .projectPage {
+    padding: 1rem;
   }
 
-  .sectionTitle {
-    font-size: var(--font-size-h3);
+  .projectTitle {
+    font-size: 2rem;
   }
 
   .projectHeader {
     flex-direction: column;
     text-align: center;
+  }
+  
+  .headerItem {
+    padding: 0.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
   }
 }
