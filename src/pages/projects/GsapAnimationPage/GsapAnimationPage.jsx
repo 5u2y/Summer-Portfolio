@@ -295,7 +295,7 @@ body {
             </section>
 
             <section className={styles.projectSection}>
-                <h2 className={styles.sectionTitle}>Final Product</h2>
+                <h2 className={styles.sectionTitle}>Inspiration</h2>
                 <div className={styles.finalProductContainer}>
                     <a href="https://codepen.io/visnuravichandran/pen/GRZQVdP" target="_blank" rel="noopener noreferrer" className={styles.finalProductLink}>
                         View GSAP Animation on CodePen
