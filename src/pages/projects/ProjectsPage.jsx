@@ -39,7 +39,7 @@ const ProjectsPage = () => {
 
         {/* Project Card 3: Company Branding */}
         <div className={styles.projectCard}>
-          <h3 className={styles.projectTitle}>Company Branding</h3>
+          <h3 className={styles.projectTitle}>"Katz Alley" - Company Branding</h3>
           <p className={styles.projectDescription}>
           This project was a branding and logo development assignment for a fictional bowling alley called "Katz Alley." The goal was to practice and demonstrate my skills in Adobe Illustrator by creating a full branding guide. My role included the entire creative process, from developing a retro-inspired visual style to designing the main logo, secondary logos, and a color palette. I was also responsible for the document layout, typography, and graphic elements, which were all compiled into a single-page brand guide.
           </p>
@@ -53,7 +53,7 @@ const ProjectsPage = () => {
 
         {/* Project Card 4: Term Project */}
         <div className={styles.projectCard}>
-          <h3 className={styles.projectTitle}>Term Project</h3>
+          <h3 className={styles.projectTitle}>Candles & Hearth - Scented Candles Project</h3>
           <p className={styles.projectDescription}>
           This was a term project focused on designing and establishing a brand identity for a physical product: a scented candle line. The project's goal was to demonstrate my proficiency in Adobe Illustrator by designing and crafting original branding elements. My role involved the entire creative process, from an initial inspiration walk to developing a minimalist, pastel-toned style guide. The final deliverables included primary and secondary logos, a color palette, and a candle mockup created in Adobe Photoshop, all compiled into a final branding board.
           </p>

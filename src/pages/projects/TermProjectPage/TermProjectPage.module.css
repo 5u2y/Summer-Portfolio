@@ -1,5 +1,214 @@
-/* src/projects/TermProjectPage/TermProjectPage.module.css */
-.termProjectPage {
-    padding: var(--spacing-xxl) var(--spacing-lg);
+/* TermProjectPage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500&family=Merriweather:wght@400;700&family=Open+Sans:wght@400&family=Quicksand:wght@400&display=swap');
+
+.projectPage {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.projectTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #B19CD9; /* Updated to a soft purple */
     text-align: center;
-  }
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #E6E6FA;
+    padding-bottom: 1rem;
+}
+
+.projectHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    background-color: #E6E6FA;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.headerItem {
+    flex: 1 1 180px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.headerLabel {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.headerValue {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.projectSection {
+    margin-bottom: 2rem;
+}
+
+.sectionTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #B19CD9; /* Updated to a soft purple */
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.sectionText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* Styles for image containers and images */
+.imageContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.imageTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.projectImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectImage:hover {
+  transform: scale(1.02);
+}
+
+.logoImage {
+    max-width: 250px;
+}
+
+.colorPaletteImage {
+    max-width: 80%;
+}
+
+.typographySection {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.fontItem {
+    background-color: #E6E6FA;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Font classes for the branding guide */
+.fontMerriweather {
+    font-family: 'Merriweather', serif;
+}
+
+.fontOpenSans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fontQuicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.fontName {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #B19CD9;
+    margin-bottom: 0.5rem;
+}
+
+.fontUsage {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.fontExample {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+.techList {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.techList li {
+    background-color: #E6E6FA;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #333;
+    border: 1px solid #dcdce6;
+}
+
+.attachmentsSection {
+    margin-top: 2rem;
+}
+
+.attachmentsList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.attachmentsList li {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projectPage {
+        padding: 1rem;
+    }
+    .projectTitle {
+        font-size: 2rem;
+    }
+    .projectHeader {
+        flex-direction: column;
+    }
+    .headerItem {
+        padding: 0.5rem;
+    }
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+    .colorPaletteImage {
+        max-width: 100%;
+    }
+}
