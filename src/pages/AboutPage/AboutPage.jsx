@@ -78,7 +78,7 @@ const AboutPage = () => {
       </section>
 
       <section className={styles.imageSection}>
-        <h2 className={styles.sectionHeading}>My Visual Work</h2>
+        <h2 className={styles.sectionHeading}>My Skills Set</h2>
         <div className={styles.imageGrid}>
           <div className={styles.imageFrame}>
             <img 

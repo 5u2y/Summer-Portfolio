@@ -1,16 +1,28 @@
 // src/pages/TargetDisciplinePage/TargetDisciplinePage.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // NEW: Import useNavigate hook
 import styles from './TargetDisciplinePage.module.css';
-import resumePdf from '../../assets/images/etc/Qui_Diaz_Resume.PDF'; // CORRECTED: The path has been updated to the 'etc' folder
+import resumePdf from '../../assets/images/etc/Qui_Diaz_Resume.PDF';
 
 const TargetDisciplinePage = () => {
+  const navigate = useNavigate(); // NEW: Initialize the useNavigate hook
+
+  // NEW: Function to handle the back button click
+  const handleBackClick = () => {
+    navigate('/about'); // This assumes your AboutPage route is '/about'
+  };
+
   return (
     <div className={styles.targetDisciplinePage}>
+      {/* NEW: Back button */}
+      <button onClick={handleBackClick} className={styles.backButton}>
+        Back
+      </button>
+
       <header>
         <h1 className={styles.pageTitle}>My Target Disciplines</h1>
       </header>
       
-      {/* NEW: Introduction section */}
       <section className={styles.introSection}>
         <p className={styles.introText}>
           I’m currently studying New Media Design and Web Development at BCIT, focusing on the areas that speak to me most—branding, graphic design, web design, and content creation. I love crafting visuals and experiences that feel intentional, personal, and well-balanced. This page is a look into the creative paths I’m drawn to—disciplines that let me mix design thinking with emotional connection and thoughtful storytelling.
@@ -29,7 +41,6 @@ const TargetDisciplinePage = () => {
       <section className={styles.section}>
         <h2 className={styles.sectionHeading}>Relevant BCIT Courses</h2>
 
-        {/* Role: Web & Graphic Designer */}
         <div className={styles.roleSection}>
           <h3 className={styles.roleTitle}>Role: Web & Graphic Designer</h3>
           <ul className={styles.courseList}>
@@ -39,7 +50,6 @@ const TargetDisciplinePage = () => {
           </ul>
         </div>
 
-        {/* Role: Web Designer */}
         <div className={styles.roleSection}>
           <h3 className={styles.roleTitle}>Role: Web Designer</h3>
           <ul className={styles.courseList}>
@@ -49,7 +59,6 @@ const TargetDisciplinePage = () => {
           </ul>
         </div>
 
-        {/* Role: Content Designer */}
         <div className={styles.roleSection}>
           <h3 className={styles.roleTitle}>Role: Content Designer</h3>
           <ul className={styles.courseList}>
@@ -59,7 +68,6 @@ const TargetDisciplinePage = () => {
         </div>
       </section>
       
-      {/* NEW: Button to view resume */}
       <div className={styles.resumeButtonContainer}>
         <a href={resumePdf} target="_blank" rel="noopener noreferrer" className={styles.resumeButton}>
           View My Resume

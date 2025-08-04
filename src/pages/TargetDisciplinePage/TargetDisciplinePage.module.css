@@ -1,145 +1,134 @@
 /* src/pages/TargetDisciplinePage/TargetDisciplinePage.module.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
 .targetDisciplinePage {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: var(--spacing-xxl) var(--spacing-lg);
-  color: var(--color-text-primary);
+  padding: 2rem;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  position: relative; /* Added for positioning the back button */
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #B19CD9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #9c80d4;
 }
 
 .pageTitle {
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #B19CD9;
   text-align: center;
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xxl);
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #E6E6FA;
+  padding-bottom: 1rem;
 }
 
-/* NEW: Styling for the introduction section */
 .introSection {
-  max-width: 800px;
-  margin: 0 auto var(--spacing-xxl) auto;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .introText {
-  font-size: var(--font-size-body);
-  line-height: 1.8;
-  color: var(--color-text-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;
 }
 
 .section {
-  margin-bottom: var(--spacing-xxl);
-  /* MODIFIED: Add flexbox to allow role sections to be side-by-side */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-lg); /* Add gap for spacing between the sections */
+  margin-bottom: 2rem;
 }
 
 .sectionHeading {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  text-align: center;
-  position: relative;
-  letter-spacing: 1px;
-  margin-bottom: var(--spacing-lg);
-  width: 100%; /* Ensure the heading takes full width in the flex container */
-}
-
-.sectionHeading::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: var(--color-accent);
-  margin: var(--spacing-md) auto 0;
-  border-radius: var(--border-radius-sm);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #B19CD9;
+  margin-bottom: 1rem;
 }
 
 .focusList {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--spacing-xl);
-  font-size: var(--font-size-body-lg);
-  font-weight: var(--font-weight-medium);
+  list-style-type: disc;
+  padding-left: 2rem;
 }
 
 .focusList li {
-  padding: var(--spacing-md) var(--spacing-lg);
-  background-color: var(--color-background-light);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
 }
 
 .roleSection {
-  background-color: var(--color-soft-lavender);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-xl);
-  /* MODIFIED: Adjusted for new flexbox parent */
-  flex: 1 1 300px; /* Allow items to grow, shrink, and have a minimum width */
-  margin: 0; /* Remove top/bottom margin, use parent gap instead */
-  max-width: none; /* Remove max-width to allow flexing */
-  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
 }
 
 .roleTitle {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-accent-dark);
-  margin-top: 0;
-  margin-bottom: var(--spacing-md);
-  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
 
 .courseList {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
+  list-style-type: circle;
+  padding-left: 2.5rem;
 }
 
 .courseList li {
-  font-size: var(--font-size-body);
-  color: var(--color-text-primary);
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.25rem;
 }
 
-/* NEW: Styling for the resume button */
 .resumeButtonContainer {
   text-align: center;
-  margin-top: var(--spacing-xxl);
+  margin-top: 2rem;
 }
 
 .resumeButton {
   display: inline-block;
-  background-color: var(--color-accent);
-  color: var(--color-text-light);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: 1rem 2rem;
+  background-color: #B19CD9;
+  color: white;
   text-decoration: none;
-  border-radius: var(--border-radius-sm);
-  font-weight: var(--font-weight-bold);
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .resumeButton:hover {
-  background-color: var(--color-accent-dark);
-  transform: translateY(-2px);
+  background-color: #9c80d4;
 }
 
 @media (max-width: 768px) {
-  .focusList {
-    flex-direction: column;
-    align-items: center;
+  .targetDisciplinePage {
+      padding: 1rem;
   }
-  /* MODIFIED: Add mobile styling for the role sections */
-  .section {
-    flex-direction: column;
-    gap: var(--spacing-md);
+  .pageTitle {
+      font-size: 2rem;
+  }
+  .sectionHeading {
+      font-size: 1.5rem;
   }
 }
